@@ -1,101 +1,91 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  padding: 20px;
   margin: 0;
+  padding: 0;
+  background: #f4f4f4;
 }
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  background-color: #fff;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-h1,
-h2 {
+h1 {
   text-align: center;
-  color: #333;
 }
 
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin: 20px 0;
-}
-
-button {
-  padding: 8px 16px;
-  border: none;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #555;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-thead {
-  background-color: #333;
-  color: #fff;
-}
-
-th,
-td {
-  padding: 8px;
-  text-align: center;
-  border: 1px solid #ddd;
-}
-
-.chart-grid {
+.task-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.chart-grid canvas {
-  max-width: 100%;
-  margin: auto;
-}
-
-.task-editor-row {
-  display: flex;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form input,
+.task-form button {
+  padding: 10px;
+  font-size: 1em;
+}
+
+.task-days {
+  display: flex;
   flex-wrap: wrap;
-}
-
-.task-editor-row input,
-.task-editor-row label {
-  min-width: 100px;
-  padding: 5px;
-}
-
-.task-editor-row .day-checkboxes {
-  display: flex;
   gap: 5px;
-  align-items: center;
+  padding: 5px 0;
 }
 
-.task-editor-row .day-checkboxes label {
+.task-days label {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 5px;
+  background: #eaeaea;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
 }
 
-.task-editor-row button {
-  background-color: #d9534f;
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.task-table th {
+  background-color: #eee;
+}
+
+@media (max-width: 600px) {
+  .task-days {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-days label {
+    width: 100%;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+
+  .task-form input,
+  .task-form button {
+    font-size: 0.9em;
+    padding: 8px;
+  }
 }
