@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background-color: #333;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.chart-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chart-grid canvas {
+  max-width: 100%;
+  margin: auto;
+}
+
+.task-editor-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.task-editor-row input,
+.task-editor-row label {
+  min-width: 100px;
+  padding: 5px;
+}
+
+.task-editor-row .day-checkboxes {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.task-editor-row .day-checkboxes label {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.task-editor-row button {
+  background-color: #d9534f;
+}

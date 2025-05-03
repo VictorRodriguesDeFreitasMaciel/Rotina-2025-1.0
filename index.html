@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checklist Semanal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Checklist de Tarefas</h1>
+
+      <div class="controls">
+        <button onclick="previousWeek()">Semana Anterior</button>
+        <span id="weekDisplay"></span>
+        <span id="monthDisplay"></span>
+        <button onclick="nextWeek()">Próxima Semana</button>
+      </div>
+
+      <div id="checklistContainer"></div>
+
+      <h2>Gerenciar Tarefas</h2>
+      <div id="taskEditor"></div>
+      <div style="text-align: center; margin-top: 10px">
+        <button onclick="addNewTask()">Adicionar Tarefa</button>
+      </div>
+
+      <h2>Gráficos Diários</h2>
+      <div class="chart-grid" id="dailyCharts"></div>
+
+      <h2>Resumo Semanal e Mensal</h2>
+      <div class="chart-grid">
+        <canvas id="weeklyChart"></canvas>
+        <canvas id="monthlyChart"></canvas>
+      </div>
+
+      <h2>Resumo Anual</h2>
+      <canvas id="annualChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
